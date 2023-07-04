@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/python,pycharm+all,django
-# Edit at https://www.toptal.com/developers/gitignore?templates=python,pycharm+all,django
+# Created by https://www.toptal.com/developers/gitignore/api/vuejs,python,pycharm+all,django
+# Edit at https://www.toptal.com/developers/gitignore?templates=vuejs,python,pycharm+all,django
 
 ### Django ###
 *.log
@@ -123,7 +123,6 @@ ipython_config.py
 
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
 __pypackages__/
-commenting/__pycache__
 
 # Celery stuff
 celerybeat-schedule
@@ -352,4 +351,11 @@ poetry.toml
 # LSP config files
 pyrightconfig.json
 
-# End of https://www.toptal.com/developers/gitignore/api/python,pycharm+all,django
+### Vuejs ###
+# Recommended template: Node.gitignore
+
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# End of https://www.toptal.com/developers/gitignore/api/vuejs,python,pycharm+all,django
