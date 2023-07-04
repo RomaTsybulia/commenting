@@ -1,0 +1,27 @@
+version: '3'
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+    volumes:
+      - .:/code
+    environment:
+      - DJANGO_SETTINGS_MODULE=commenting.settings
+      - SECRET_KEY=django-insecure-qwj02&o)3e$=oz$xa_ldut6p_zwvot&5h92cou3p5$uo_^xsie
+      - DEBUG=True
+    command: >
+      sh -c "python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+
+  frontend:
+    build:
+      context: ./comment_vue
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
+    volumes:
+      - ./comment_vue:/app
+    command: >
+      npm run serve

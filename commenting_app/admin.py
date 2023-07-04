@@ -1,7 +1,12 @@
 from django.contrib import admin
+from django.contrib.admin import ModelAdmin
 
-from commenting_app.models import UserProfile, Comment
+from commenting_app.models import Author, Comment
 
 
-admin.site.register(UserProfile)
-admin.site.register(Comment)
+class CommentAdmin(ModelAdmin):
+    list_display = ["author", "text", "likes"]
+
+
+admin.site.register(Author)
+admin.site.register(Comment, CommentAdmin)
